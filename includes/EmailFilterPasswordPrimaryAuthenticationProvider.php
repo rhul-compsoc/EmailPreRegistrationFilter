@@ -25,19 +25,22 @@ class EmailFilterPasswordPrimaryAuthenticationProvider
 
 		$email = $userdata_req->email;
 		$ret = StatusValue::newGood();
+		$matched = false;
 		foreach ($patterns as $pattern) {
-			if (preg_match($pattern, $email)) {
-				if ( !$is_whitelist ){
-					$ret->fatal($error_msg);
-					return $ret;
+				if (preg_match($pattern, $email)) {
+				        $matched = true;
+				        if ( !$is_whitelist ){
+				                $ret->fatal($error_msg);
+				                return $ret;
+				        }
 				}
-			}
 		}
-		// No matches
-		if ($is_whitelist) {
-			$ret->fatal($error_msg);
-			return $ret;
+
+		if ($is_whitelist && !$matched) {
+				$ret->fatal($error_msg);
+				return $ret;
 		}
+
 
 		return parent::testForAccountCreation($user, $creator, $reqs);
 	}
