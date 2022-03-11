@@ -7,7 +7,7 @@
 	"config": {
 		"PatternList": {
 			"value": [
-				"/.*@example.com$/"
+				"/.*@live.rhul.ac.uk$/"
 			],
 			"description": "List of patterns to preg_match against a submitted email"
 		},

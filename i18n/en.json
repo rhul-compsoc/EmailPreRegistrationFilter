@@ -1,4 +1,4 @@
 {
 	"emailregistrationfilter-desc": "Allows or denies account registration according to the submitted email address",
-	"emailregistrationfilter-default-error-msg": "Email filter enforced"
+	"emailregistrationfilter-default-error-msg": "Only students of Royal Holloway, University of London are allowed to sign up."
 }
