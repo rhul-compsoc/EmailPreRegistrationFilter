@@ -1,6 +1,6 @@
 {
-	"name": "EmailRegistrationFilter",
-	"author": "gaboflowers",
+	"name": "EmailPreRegistrationFilter",
+	"author": "leondrolio",
 	"description": "Allows or denies account registration according to the submitted email account",
 	"descriptionmsg": "emailregistrationfilter-desc",
 	"version": "0.1",
@@ -24,12 +24,12 @@
 		"EmailRegistrationFilter": "GlobalVarConfig::newInstance"
 	},
 	"AutoloadClasses": {
-		"EmailFilterPasswordPrimaryAuthenticationProvider": "includes/EmailFilterPasswordPrimaryAuthenticationProvider.php"
+		"RoyalHollowayPreAuthenticationProvider": "includes/RoyalHollowayPreAuthenticationProvider.php"
 	},
 	"AuthManagerAutoConfig": {
-		"primaryauth": {
-			"EmailFilterPasswordPrimaryAuthenticationProvider": {
-				"class": "EmailFilterPasswordPrimaryAuthenticationProvider",
+		"preauth": {
+			"RoyalHollowayPreAuthenticationProvider": {
+				"class": "RoyalHollowayPreAuthenticationProvider",
 				"sort": 0
 			}
 		}
